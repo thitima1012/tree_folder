@@ -1,0 +1,30 @@
+.folder, .file {
+    margin-left: 20px;
+    padding: 5px; /* เพิ่มการเข้ารหัสเพื่อเพิ่มพื้นที่รอบโฟลเดอร์และไฟล์ */
+    cursor: pointer; /* ทำให้เมาส์เป็นรูปของแถบเลื่อนเมื่อเหยียดเมาส์เหนือโฟลเดอร์หรือไฟล์ */
+    transition: background-color 0.3s ease; /* เพิ่มการเปลี่ยนแปลงสีพื้นหลังอย่างนุ่มนวลเมื่อโฟลเดอร์หรือไฟล์ถูกเลือก */
+}
+
+.folder::before, .file::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    background-size: cover;
+}
+
+.selected {
+    
+    color: rgb(0, 0, 0);
+    border-radius: 5px; /* เพิ่มขอบเขตของสีพื้นหลังที่เลือก */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* เพิ่มเงาสีเทาเพื่อเน้นโฟลเดอร์หรือไฟล์ที่ถูกเลือก */
+}
+
+.folder::before {
+    background-image: url('1.jpg');
+}
+
+.file::before {
+    background-image: url('2.jpg');
+}

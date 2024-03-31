@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Folder Structure Tree</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .file, .folder {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- เพิ่ม div ที่เป็นโครงสร้างของโฟลเดอร์และไฟล์ -->
+    <div id="folderTree" ondrop="dropFile(event)" ondragover="allowDrop(event)" onclick="deleteItem(event)"></div>
+
+    <!-- เพิ่มช่องข้อมูลสำหรับกรอกชื่อโฟลเดอร์ -->
+    <input type="text" id="folderNameInput" placeholder="Enter folder name">
+    <!-- เพิ่มปุ่มสำหรับเพิ่มโฟลเดอร์ -->
+    <button id="addFolderBtn">Add Folder</button>
+
+    <!-- เพิ่มช่องข้อมูลสำหรับกรอกชื่อไฟล์ -->
+    <input type="text" id="fileNameInput" placeholder="Enter file name" draggable="true" ondragstart="dragFile(event)">
+    <!-- เพิ่มปุ่มสำหรับเพิ่มไฟล์ -->
+    <button id="addFileBtn">Add File</button>
+    
+    <!-- เรียกใช้งานไฟล์ JavaScript ที่มีชื่อว่า script.js -->
+    <script src="script.js"></script>
+</body>
+
+</html>
